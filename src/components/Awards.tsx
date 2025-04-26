@@ -1,29 +1,35 @@
+import { useView } from '../context/ViewContext';
+import { awardsData } from '../data/content';
+
 const Awards = () => {
+  const { isTechnical } = useView();
+
   return (
-    <div className="space-y-4">
-      <div className="border-l-2 border-gray-200 pl-4">
-        <div className="flex items-center gap-3">
-          <span className="text-2xl" role="img" aria-label="trophy">🏆</span>
-          <div>
-            <h4 className="text-lg font-semibold text-gray-800">York Engineering Consulting Competition 2023</h4>
-            <p className="text-gray-600">1st Place</p>
-            <p className="text-gray-600 mt-1">Presented a cloud-migration strategy allowing the client to uninterruptedly and safely move data from in-house servers to the cloud.</p>
+    <section className="mb-8">
+      <h2 className="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Awards</h2>
+      <div className="space-y-6">
+        {awardsData.map((award, index) => (
+          <div key={index} className="border-l-2 border-gray-200 pl-4">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl" role="img" aria-label={award.title}>
+                {award.title.includes('Hackathon') ? '🏆' : 
+                 award.title.includes('Scholarship') ? '🎓' : 
+                 award.title.includes('Competition') ? '🥇' : '🌟'}
+              </span>
+              <h3 className="text-lg font-semibold text-gray-800">{award.title}</h3>
+            </div>
+            <p className="text-sm text-gray-500">{award.date}</p>
+            <p className="text-gray-600 mt-1">{award.organization}</p>
+            <ul className="mt-2 list-disc list-inside text-gray-600">
+              {(isTechnical ? award.technical : award.nonTechnical).map((point, pointIndex) => (
+                <li key={pointIndex}>{point}</li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ))}
       </div>
+    </section>
+  );
+};
 
-      <div className="border-l-2 border-gray-200 pl-4">
-        <div className="flex items-center gap-3">
-          <span className="text-2xl" role="img" aria-label="medal">🥈</span>
-          <div>
-            <h4 className="text-lg font-semibold text-gray-800">UNHacks Hackathon 2021</h4>
-            <p className="text-gray-600">2nd Place</p>
-            <p className="text-gray-600 mt-1">Pitched a poster-media application to the university that minimizes the growing on-campus poster paper waste by 90%.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-export default Awards 
+export default Awards; 
