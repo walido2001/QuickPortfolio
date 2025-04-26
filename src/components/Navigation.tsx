@@ -13,6 +13,24 @@ const Navigation = () => {
     }
   };
 
+  const handleDownload = () => {
+    try {
+      const resumeUrl = isTechnical 
+        ? '/resumes/technical-resume.pdf'
+        : '/resumes/non-technical-resume.pdf';
+      
+      const link = document.createElement('a');
+      link.href = resumeUrl;
+      link.download = isTechnical ? 'walid-aldari-technical-resume.pdf' : 'walid-aldari-non-technical-resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      alert('Sorry, there was an error downloading the resume. Please try again later.');
+    }
+  };
+
   const sections = [
     { id: 'education', label: 'Education' },
     { id: 'experience', label: 'Experience' },
@@ -72,8 +90,8 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* View toggle - always visible */}
-          <div className="flex items-center">
+          {/* View toggle and download button */}
+          <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <span className={`text-sm font-medium ${isTechnical ? 'text-gray-400' : 'text-white'}`}>
                 Non-Technical
@@ -91,6 +109,15 @@ const Navigation = () => {
                 Technical
               </span>
             </div>
+            <button
+              onClick={handleDownload}
+              className="p-2 rounded-md bg-gray-800"
+              title="Download Resume"
+            >
+              <svg className="w-5 h-5 text-white hover:text-gray-300 transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -107,6 +134,15 @@ const Navigation = () => {
               {section.label}
             </button>
           ))}
+          <button
+            onClick={handleDownload}
+            className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-700 transition-colors duration-200 flex items-center gap-1"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download Resume
+          </button>
         </div>
       </div>
     </nav>
