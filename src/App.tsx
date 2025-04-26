@@ -7,65 +7,74 @@ import Contact from './components/Contact'
 import Projects from './components/Projects'
 import Awards from './components/Awards'
 import Extracurriculars from './components/Extracurriculars'
+import { ViewProvider } from './context/ViewContext'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden relative">
-        <Header />
-        <div className="p-8">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-3 space-y-6">
-              <div className="animate-slide-in-left [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
-                <section className="mb-8">
-                  <p className="text-gray-600 leading-relaxed">
-                    A dedicated Software Engineer with a strong academic foundation in Big Data and hands-on experience in full-stack development. 
-                    Proven track record in developing data analysis tools, web applications, and contributing to enterprise-level projects. 
-                    Demonstrated leadership as a Teaching Assistant and technical expertise across multiple internships at companies like UMMA and Holman Automotive. 
-                    Passionate about leveraging technology to solve complex problems and create efficient solutions.
-                  </p>
-                </section>
+    <ViewProvider>
+      <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+        <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden relative">
+          <Header />
+          <div className="p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+              <div className="lg:col-span-3 space-y-6">
+                <div className="animate-slide-in-left [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
+                  <section className="mb-8">
+                    <p className="text-gray-600 leading-relaxed">
+                      A dedicated Software Engineer with a strong academic foundation in Big Data and hands-on experience in full-stack development. 
+                      Proven track record in developing data analysis tools, web applications, and contributing to enterprise-level projects. 
+                      Demonstrated leadership as a Teaching Assistant and technical expertise across multiple internships at companies like UMMA and Holman Automotive. 
+                      Passionate about leveraging technology to solve complex problems and create efficient solutions.
+                    </p>
+                  </section>
+                </div>
+                <div className="animate-slide-in-left [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
+                  <section id="education">
+                    <Education />
+                  </section>
+                </div>
+                <div className="animate-slide-in-left [animation-delay:600ms] opacity-0 [animation-fill-mode:forwards]">
+                  <section id="experience">
+                    <Experience />
+                  </section>
+                </div>
+                <div className="animate-slide-in-left [animation-delay:800ms] opacity-0 [animation-fill-mode:forwards]">
+                  <section id="awards" className="mb-8">
+                    <h2 className="text-2xl font-bold mb-4 text-gray-900">Awards</h2>
+                    <Awards />
+                  </section>
+                </div>
+                <div className="animate-slide-in-left [animation-delay:1000ms] opacity-0 [animation-fill-mode:forwards]">
+                  <section id="notable-projects" className="mb-8">
+                    <h2 className="text-2xl font-bold mb-4 text-gray-900">Notable Projects</h2>
+                    <Profile />
+                  </section>
+                </div>
+                <div className="animate-slide-in-left [animation-delay:1200ms] opacity-0 [animation-fill-mode:forwards]">
+                  <section id="extracurriculars" className="mb-8">
+                    <h2 className="text-2xl font-bold mb-4 text-gray-900">Extracurricular Activities</h2>
+                    <Extracurriculars />
+                  </section>
+                </div>
+                <div className="animate-slide-in-left [animation-delay:1400ms] opacity-0 [animation-fill-mode:forwards]">
+                  <section id="other-projects">
+                    <Projects />
+                  </section>
+                </div>
               </div>
-              <div className="animate-slide-in-left [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
-                <Education />
-              </div>
-              <div className="animate-slide-in-left [animation-delay:600ms] opacity-0 [animation-fill-mode:forwards]">
-                <Experience />
-              </div>
-              <div className="animate-slide-in-left [animation-delay:800ms] opacity-0 [animation-fill-mode:forwards]">
-                <section className="mb-8">
-                  <h2 className="text-2xl font-bold mb-4">Awards</h2>
-                  <Awards />
-                </section>
-              </div>
-              <div className="animate-slide-in-left [animation-delay:1000ms] opacity-0 [animation-fill-mode:forwards]">
-                <section className="mb-8">
-                  <h2 className="text-2xl font-bold mb-4">Notable Projects</h2>
-                  <Profile />
-                </section>
-              </div>
-              <div className="animate-slide-in-left [animation-delay:1200ms] opacity-0 [animation-fill-mode:forwards]">
-                <section className="mb-8">
-                  <h2 className="text-2xl font-bold mb-4">Extracurricular Activities</h2>
-                  <Extracurriculars />
-                </section>
-              </div>
-              <div className="animate-slide-in-left [animation-delay:1400ms] opacity-0 [animation-fill-mode:forwards]">
-                <Projects />
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="animate-slide-in-right [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
-                <Contact />
-              </div>
-              <div className="animate-slide-in-right [animation-delay:600ms] opacity-0 [animation-fill-mode:forwards]">
-                <Skills />
+              <div className="space-y-6">
+                <div className="animate-slide-in-right [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
+                  <Contact />
+                </div>
+                <div className="animate-slide-in-right [animation-delay:600ms] opacity-0 [animation-fill-mode:forwards]">
+                  <Skills />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </ViewProvider>
   )
 }
 
