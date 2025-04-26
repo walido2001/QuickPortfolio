@@ -11,7 +11,7 @@ const Header = () => {
             />
             <div className="animate-fade-in [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
               <h1 className="text-4xl font-bold">Walid AlDari</h1>
-              <h2 className="text-xl text-gray-400 mt-2">Software Engineer</h2>
+              <h2 className="text-xl text-gray-400 mt-2">Software & Data Engineer</h2>
               <div className="mt-4 text-gray-400">
                 <p>Bachelor of Engineering, Software Engineering with a focus on Big Data</p>
                 <p>York University • GPA: 3.6/4.0</p>
