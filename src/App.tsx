@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+import { ViewProvider } from './context/ViewContext'
 import Header from './components/Header'
 import Profile from './components/Profile'
 import Experience from './components/Experience'
@@ -8,11 +10,11 @@ import Projects from './components/Projects'
 import Awards from './components/Awards'
 import Extracurriculars from './components/Extracurriculars'
 import Navigation from './components/Navigation'
-import { ViewProvider } from './context/ViewContext'
 
 function App() {
   return (
     <ViewProvider>
+      <Analytics />
       <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden relative">
           <Header />
