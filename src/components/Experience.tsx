@@ -15,7 +15,7 @@ const Experience = () => {
                 {experience.company.charAt(0)}
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-800">{experience.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">{isTechnical ? experience.title.technical : experience.title.nonTechnical}</h3>
                 <p className="text-gray-600">{experience.company}</p>
                 <p className="text-sm text-gray-500">{experience.date}</p>
               </div>

@@ -7,6 +7,7 @@ import Contact from './components/Contact'
 import Projects from './components/Projects'
 import Awards from './components/Awards'
 import Extracurriculars from './components/Extracurriculars'
+import Navigation from './components/Navigation'
 import { ViewProvider } from './context/ViewContext'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden relative">
           <Header />
+          <Navigation />
           <div className="p-8">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
               <div className="lg:col-span-3 space-y-6">
@@ -39,20 +41,17 @@ function App() {
                   </section>
                 </div>
                 <div className="animate-slide-in-left [animation-delay:800ms] opacity-0 [animation-fill-mode:forwards]">
-                  <section id="awards" className="mb-8">
-                    <h2 className="text-2xl font-bold mb-4 text-gray-900">Awards</h2>
+                  <section id="awards">
                     <Awards />
                   </section>
                 </div>
                 <div className="animate-slide-in-left [animation-delay:1000ms] opacity-0 [animation-fill-mode:forwards]">
-                  <section id="notable-projects" className="mb-8">
-                    <h2 className="text-2xl font-bold mb-4 text-gray-900">Notable Projects</h2>
+                  <section id="notable-projects">
                     <Profile />
                   </section>
                 </div>
                 <div className="animate-slide-in-left [animation-delay:1200ms] opacity-0 [animation-fill-mode:forwards]">
-                  <section id="extracurriculars" className="mb-8">
-                    <h2 className="text-2xl font-bold mb-4 text-gray-900">Extracurricular Activities</h2>
+                  <section id="extracurriculars">
                     <Extracurriculars />
                   </section>
                 </div>

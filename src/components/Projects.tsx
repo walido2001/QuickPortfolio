@@ -11,18 +11,18 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <div key={index} className="border-l-2 border-gray-200 pl-4">
             <div className="flex items-center gap-3">
-              <span className="text-2xl" role="img" aria-label={project.title}>
-                {project.title.includes('LookUp') ? '🔍' : 
-                 project.title.includes('Game') ? '🎮' : 
-                 project.title.includes('Navigator') ? '📚' : '💡'}
+              <span className="text-2xl" role="img" aria-label={isTechnical ? project.title.technical : project.title.nonTechnical}>
+                {(isTechnical ? project.title.technical : project.title.nonTechnical).includes('LookUp') ? '🔍' : 
+                 (isTechnical ? project.title.technical : project.title.nonTechnical).includes('Game') ? '🎮' : 
+                 (isTechnical ? project.title.technical : project.title.nonTechnical).includes('Navigator') ? '📚' : '💡'}
               </span>
               <a 
-                href={`https://github.com/walido2001/${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`https://github.com/walido2001/${(isTechnical ? project.title.technical : project.title.nonTechnical).toLowerCase().replace(/\s+/g, '-')}`}
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-lg font-semibold text-gray-800 hover:text-blue-600 transition-colors"
               >
-                {project.title}
+                {isTechnical ? project.title.technical : project.title.nonTechnical}
               </a>
             </div>
             <p className="text-sm text-gray-500">{project.date}</p>

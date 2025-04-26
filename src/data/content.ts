@@ -43,7 +43,10 @@ export const skillsData = {
 
 export const experienceData = [
   {
-    title: 'Teaching Assistant',
+    title: {
+      technical: 'Teaching Assistant',
+      nonTechnical: 'Teaching Assistant'
+    },
     company: 'Lassonde School Of Engineering - York University',
     location: 'Toronto, Canada',
     date: 'Jan. 2023 – Aug. 2024',
@@ -59,7 +62,10 @@ export const experienceData = [
     ]
   },
   {
-    title: 'Business and Technology Intern',
+    title: {
+      technical: 'Software Engineering Intern',
+      nonTechnical: 'Business and Technology Intern'
+    },
     company: 'UMMA',
     location: 'Pennsylvania, US',
     date: 'Jun. 2023 – Aug. 2023',
@@ -75,7 +81,10 @@ export const experienceData = [
     ]
   },
   {
-    title: 'Technical Analyst Intern',
+    title: {
+      technical: 'Software Engineering Intern',
+      nonTechnical: 'Technical Analyst Intern'
+    },
     company: 'Holman Automotive',
     location: 'Toronto, Canada',
     date: 'Sep. 2022 – Dec. 2022',
@@ -129,7 +138,10 @@ export const extracurricularsData = [
 
 export const projectsData = [
   {
-    title: 'ReviewLens',
+    title: {
+      technical: 'ReviewLens',
+      nonTechnical: 'ReviewLens'
+    },
     technologies: 'Python, Flask, OpenAPI, ReactJS',
     date: 'Mar 2025',
     technical: [
@@ -144,7 +156,10 @@ export const projectsData = [
     ]
   },
   {
-    title: 'Predictive Risk Analysis - Healthcare Strategy Use Case',
+    title: {
+      technical: 'Heart Risk Detection ML Model',
+      nonTechnical: 'Predictive Risk Analysis - Healthcare Strategy Use Case'
+    },
     technologies: 'Python, SkLearn',
     date: 'July 2024 - August 2024',
     technical: [
@@ -156,7 +171,10 @@ export const projectsData = [
     ]
   },
   {
-    title: 'Satellite Operations Services Optimizer - Space Strategy',
+    title: {
+      technical: 'Satellite Operations Services Optimizer',
+      nonTechnical: 'Satellite Operations Services Optimizer - Space Strategy'
+    },
     technologies: 'Python, ReactJS, Flask, FastAPI, and Docker',
     date: 'Sept. 2023 – Apr. 2024',
     technical: [
@@ -168,7 +186,10 @@ export const projectsData = [
     ]
   },
   {
-    title: 'YuLookUp',
+    title: {
+      technical: 'YuLookUp',
+      nonTechnical: 'YuLookUp'
+    },
     technologies: 'Java, JavaFX, Gradle, GSON, Selenium',
     date: 'Jan - April 2023',
     technical: [
@@ -181,7 +202,10 @@ export const projectsData = [
     ]
   },
   {
-    title: 'Asteroid Game',
+    title: {
+      technical: 'Asteroid Game',
+      nonTechnical: 'Asteroid Game'
+    },
     technologies: 'Verilog HDL, DE-10 lite FPGA, Digital Logic Design Principles',
     date: 'November 2021',
     technical: [
@@ -194,7 +218,10 @@ export const projectsData = [
     ]
   },
   {
-    title: 'Course Prerequisite Navigator',
+    title: {
+      technical: 'Course Prerequisite Navigator',
+      nonTechnical: 'Course Prerequisite Navigator'
+    },
     technologies: 'Python, Flask, Bootstrap, Selenium Web Scraping',
     date: 'August 2021',
     technical: [
@@ -204,6 +231,47 @@ export const projectsData = [
     nonTechnical: [
       'Developed a web app using Flask serving as a backend backed with a Bootstrap frontend to search and visualize student course prerequisites 90% more effectively than traditional methods.',
       'Web scraped and cleaned over 250 courses\' data using Selenium scripts and stored them in JSON files'
+    ]
+  }
+];
+
+export const awardsData = [
+  {
+    title: 'Dean\'s Honor List',
+    date: '2020-2021, 2023-2024',
+    organization: 'York University',
+    technical: [
+      'Recognized for academic excellence in Software Engineering program',
+    ],
+    nonTechnical: [
+      'Demonstrated consistent academic excellence across multiple years',
+      'Balanced technical coursework with extracurricular activities'
+    ]
+  },
+  {
+    title: 'York Engineering Consulting Competition',
+    date: '2023',
+    organization: 'York University',
+    technical: [
+      'Presented a cloud-migration strategy for uninterrupted data transfer',
+      'Developed technical solutions for secure data migration from in-house servers to cloud infrastructure'
+    ],
+    nonTechnical: [
+      'Achieved 1st place in the competition',
+      'Demonstrated strong presentation and problem-solving skills'
+    ]
+  },
+  {
+    title: 'UNHacks Hackathon',
+    date: '2021',
+    organization: 'York University',
+    technical: [
+      'Developed a poster-media application to reduce paper waste',
+      'Implemented technical solutions for digital poster management'
+    ],
+    nonTechnical: [
+      'Achieved 2nd place in the competition',
+      'Proposed sustainable solution reducing on-campus poster paper waste by 90%'
     ]
   }
 ]; 
