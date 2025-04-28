@@ -253,12 +253,10 @@ export const awardsData = [
     date: '2023',
     organization: 'York University',
     technical: [
-      'Presented a cloud-migration strategy for uninterrupted data transfer',
-      'Developed technical solutions for secure data migration from in-house servers to cloud infrastructure'
+      'Presented a cloud-migration strategy allowing the client to uninterruptedly and safely move data from in-house servers to the cloud',
     ],
     nonTechnical: [
-      'Achieved 1st place in the competition',
-      'Demonstrated strong presentation and problem-solving skills'
+      'Presented a cloud-migration strategy allowing the client to uninterruptedly and safely move data from in-house servers to the cloud'
     ]
   },
   {
@@ -266,12 +264,10 @@ export const awardsData = [
     date: '2021',
     organization: 'York University',
     technical: [
-      'Developed a poster-media application to reduce paper waste',
-      'Implemented technical solutions for digital poster management'
+      'Pitched a poster-media application to the university that minimizes the growing on-campus poster paper waste by 90%'
     ],
     nonTechnical: [
-      'Achieved 2nd place in the competition',
-      'Proposed sustainable solution reducing on-campus poster paper waste by 90%'
+      'Pitched a poster-media application to the university that minimizes the growing on-campus poster paper waste by 90%'
     ]
   }
 ]; 
