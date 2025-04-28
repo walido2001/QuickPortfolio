@@ -15,8 +15,8 @@ function App() {
   return (
     <ViewProvider>
       <Analytics />
-      <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
-        <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden relative">
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto">
           <Header />
           <Navigation />
           <div className="p-8">

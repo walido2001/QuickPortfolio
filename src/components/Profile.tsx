@@ -1,7 +1,7 @@
 const Profile = () => {
   return (
     <div className="space-y-4">
-      <h2 className="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Notable Projects</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-900 border-b border-gray-200 pb-2">Notable Projects</h2>
       <div>
         <div className="flex items-center gap-3">
           <span className="text-2xl" role="img" aria-label="AI robot">🤖</span>

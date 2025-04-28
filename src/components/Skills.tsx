@@ -7,7 +7,7 @@ const Skills = () => {
 
   return (
     <section className="mb-8 bg-gray-50 p-6 rounded-lg">
-      <h2 className="text-2xl font-bold mb-4 text-gray-900">Skills</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-900 border-b border-gray-200 pb-2">Skills</h2>
       <div className="space-y-6">
         {data.sections.map((section, index) => (
           <div key={index}>

@@ -1,10 +1,10 @@
 const Education = () => {
   return (
     <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Education</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-900 border-b border-gray-200 pb-2">Education</h2>
       <div className="space-y-4">
         <div>
-          <h3 className="text-xl font-semibold">Bachelor of Engineering, Software Engineering</h3>
+          <h3 className="text-xl font-semibold text-gray-800">Bachelor of Engineering, Software Engineering</h3>
           <p className="text-gray-600">York University, Toronto, Canada</p>
           <p className="text-sm text-gray-500">Sep. 2020 – Dec. 2024</p>
           <div className="mt-2 text-gray-600">

@@ -6,7 +6,7 @@ const Awards = () => {
 
   return (
     <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4 border-b border-gray-200 pb-2">Awards</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-900 border-b border-gray-200 pb-2">Awards</h2>
       <div className="space-y-6">
         {awardsData.map((award, index) => (
           <div key={index} className="border-l-2 border-gray-200 pl-4">
