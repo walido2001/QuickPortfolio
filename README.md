@@ -1,6 +1,6 @@
 # Description
 
-An attempt at creating a portfolio website solely using Cursor's AI code generation functionality. 
+An attempt at creating a portfolio website with assistance from Cursor's AI code generation functionality. 
 
 
 # React + TypeScript + Vite
